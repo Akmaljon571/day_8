@@ -1,0 +1,11 @@
+@mixin left(){
+  background-color: #8997fa;
+  max-width: 200px ;
+  min-width: 50px;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  margin:5px 10px;
+  display: flex;
+  justify-content:space-between;
+}

@@ -1,0 +1,243 @@
+.header{
+    max-width: 900px;
+    display: flex;
+}
+
+.left{
+    width: 350px;
+    height: 700px;
+    &_list{
+        background-color: #212332;
+        list-style-type: none;
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .input{
+        width: 290px;
+        height: 30px;
+        margin-left:50px;
+        background-color: #1a1c28;
+        padding-left: 10px;
+        font-size: 20px;
+        color: #808392;
+        
+    }
+
+    &_item{
+        padding: 20px;
+        padding-top: 0;
+        height: 70px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        position: relative;
+        border-bottom: 1px solid #1a1c28;
+    }
+
+    &_item:hover{
+        background-color: #8997fa;
+        color: #ffffff;
+    }
+
+    .active{
+        background-color: #8997fa;
+        color: #ffffff;
+    }
+
+    &_div1{
+        margin-top: 10px;
+    }
+
+    &_img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: inline;
+        margin-top: 10px;
+    }
+    
+    &_h5{
+        margin: 0;
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    &_p{
+        margin: 0;
+        height: 18px;
+        margin-left: 10px;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+    &_small{
+        position: absolute;
+        margin-top: -10px;
+        margin-left: 220px;
+    }
+
+}
+
+.right{
+    background-image:url(./../../image/bgi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    margin-top: 16px;
+    height: 680px;
+    position: relative;
+    
+    &_right1{
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    &_h5{
+       color:#fff;
+       margin: 0;
+       padding: 15px 0 30px 0px;
+       background-color: #1a1c28;
+       width: 500px;
+       display: flex;
+       align-items: center;
+       position: relative;
+       padding-left: 10px;
+    }
+
+    &_small{
+        position: absolute;
+        margin-top: -30px;
+        font-size: 15px;
+        color:blue; 
+        padding-left: 10px;
+    }
+
+    &_small1{
+        margin-top: 20px;
+        font-size: 10px;
+        text-align: end;
+    }
+
+    &_botom{
+        display: flex;
+        flex-direction: column;
+        padding: 0 25px;
+    }
+
+    &_span{
+        width: 150px;
+    }
+    
+    &_left{
+       @include left();
+       border-bottom-left-radius: 0px;
+    }
+    
+    &_right{
+       @include left();
+       margin-left: 60%;
+       border-bottom-right-radius: 0px;
+    }
+
+    &_right::before{
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 0;
+        display: block;
+        border-bottom: 13px solid #8997fa;
+        border-right:18px solid transparent;
+        border-top: 18px solid transparent;
+        border-left:18px solid transparent;
+        margin-left: 135px;
+        margin-top: 11px;               
+    }
+
+    &_left::before{
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 0;
+        display: block;
+        border-bottom: 13px solid #8997fa;
+        border-right:18px solid transparent;
+        border-top: 18px solid transparent;
+        border-left:18px solid transparent;
+        margin-left: -20px;
+        margin-top: 11px;               
+    }
+
+    &_img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        margin-left: -70px;
+        margin-top: 20px;
+        display: none;
+    }
+
+    &_input1{
+       background-color:#1a1c28;
+       margin-top: 7px;
+    }
+
+    &_input{
+        margin: 10px;
+        width: 290px;
+        height: 30px;
+        margin-left:10px;
+        background-color: #1a1c28;
+        padding-left: 10px;
+        font-size: 20px;
+        color: #808392;
+        border: 1px solid #1a1c28;
+        margin-right: 55px;
+    }
+
+    &_image{
+        margin-left:15px;
+
+    }
+
+    &_image1{
+        margin-bottom: -10px;
+        margin-left: 10px;
+    }
+
+    &_rasm5{
+        margin-left: 300px;
+    }
+
+    &_rasm{
+        width: 300px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 780px){
+    .left{
+       display: none;
+    }
+
+    .right_img{
+        display: inline;
+    }
+
+    .right_h5{
+        padding-left: 100px;
+    }
+
+    .right_small{
+        padding-left: 100px;
+    }
+
+    .right_rasm5{
+        margin-left: 200px;
+    }
+}
